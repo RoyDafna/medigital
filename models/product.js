@@ -13,7 +13,8 @@ const Product = database.define('product', {
     productMainImage: Sequelize.STRING,
     productDescription: Sequelize.TEXT,
     isAvailable: Sequelize.BOOLEAN,
-    unitInStock: Sequelize.INTEGER
+    unitInStock: Sequelize.INTEGER,
+    categoryId: Sequelize.INTEGER
 });
 
 export default Product;

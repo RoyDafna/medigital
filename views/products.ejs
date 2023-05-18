@@ -1,0 +1,60 @@
+<%- include('./components/header')%>
+
+    <body>
+        <%- include('./components/navigation')%>
+
+
+            <form id="update_form" method="post" action="/functions/edit_category/<%= category.id %>">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <img src="<%= category.categoryMainImage%>" style="width:100px" />
+                        </div>
+                        <div class="col-lg-4">
+                            <label class="form-label">Category name</label>
+                            <input type="text" name="categoryName" value="<%= category.categoryName %>"
+                                class="form-control">
+                        </div>
+                        <div class="col-lg-4">
+                            <label class="form-label">Category image</label>
+                            <input type="text" name="categoryMainImage" value="<%= category.categoryMainImage %>"
+                                class="form-control">
+                        </div>
+                        <div class="col-lg-2">
+                            <button style="margin-top: 30px;" form="update_form" type="submit" class="btn btn-primary">Update</button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </form>
+
+
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+
+
+                        <form>
+
+                            <select class="form-select" name="" aria-label="Default select example">
+                                <%for(let item of categories){%>
+                                    <option value="<%= item.id%>"><%= item.categoryName %></option>
+                                <%}%>
+                            </select>
+
+                        </form>
+
+
+                    </div>
+                    <div class="col-lg-9"></div>
+                </div>
+            </div>
+
+
+    </body>
+
+    </html>

@@ -43,7 +43,9 @@
                                     <td><%= category.id%></td>
                                     <td><img src="<%= category.categoryMainImage%>" style="width:100px" /></td>
                                     <td><%= category.categoryName%></td>
-                                    <td></td>
+                                    <td>
+                                        <a class="btn btn-info" href="/products/<%=category.id%>">Products</a>
+                                    </td>
                                 </tr>
                             <%}%>
                         </tbody>
